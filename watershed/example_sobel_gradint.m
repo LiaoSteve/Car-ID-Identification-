@@ -1,0 +1,11 @@
+I=imread('eight.tif');
+I1=double(I);
+Gx=[-1 -2 -1;0 0 0;1 2 1];
+Gy=[-1 0 1 ;-2 0 2;-1 0 1];
+Gx_I=filter2(Gx,I);
+Gy_I=filter2(Gy,I);
+sob_i=abs(Gx_I)+abs(Gy_I);
+subplot(221),imshow(I);
+subplot(222),imshow(uint8(sob_i));
+subplot(223),imshow(uint8(Gx_I));
+subplot(224),imshow(uint8(Gy_I));
