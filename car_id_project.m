@@ -1,4 +1,4 @@
-%----------------¨®µP¿ëÃÑ-----------------------------------------------
+%----------------Â¨Â®ÂµPÂ¿Ã«ÃƒÃ‘-----------------------------------------------
 clc,clear;
 [file, path] = uigetfile( ...
        {'*.png;*.jpg', 'All MATLAB Files (*.png, *.jpg)'; ...
@@ -6,6 +6,7 @@ clc,clear;
 selectedfile = fullfile(path,file);
 original=imread(selectedfile);
 
+original=License_positioning(original)
 identify(original)
 
 
